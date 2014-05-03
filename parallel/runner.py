@@ -1,10 +1,11 @@
 import Queue
 
+from parallel import config
 from parallel import worker
 
 
 class Runner(object):
-    def __init__(self, num_workers=4):
+    def __init__(self, num_workers=config.NUM_WORKERS):
         self.in_queue = Queue.Queue()
         self.out_queue = Queue.Queue()
         self.num_workers = num_workers
