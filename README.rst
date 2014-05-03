@@ -1,8 +1,8 @@
-========
-parallel
-========
+=========
+mparallel
+=========
 
-This is a minimalist parallel task runner for python programs.
+This is a minimalist tool to run multiple parallel tasks in python.
 
 Most programming languages have full support for threads but often require a
 lot of overhead work even for the simplest tasks.  This package aims to provide
@@ -16,14 +16,14 @@ First install the package.
 
 ::
 
-  pip install parallel
+  pip install mparallel
 
 In your python modules, just import it and use it as follows:
 
 ::
 
   import time
-  import parallel
+  import mparallel
 
   def some_expensive_or_waiting_task(some_param):
     # ...
@@ -31,7 +31,7 @@ In your python modules, just import it and use it as follows:
     return some_param
 
   def my_method():
-    runner = parallel.Runner()
+    runner = mparallel.Runner()
     for i in range(10):
       runner.add_task(some_expensive_or_waiting_task, i)
     print runner.results()
