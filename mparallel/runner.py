@@ -1,7 +1,7 @@
 import Queue
 
-from parallel import config
-from parallel import worker
+from mparallel import config
+from mparallel import worker
 
 
 class Runner(object):
